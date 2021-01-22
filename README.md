@@ -36,6 +36,12 @@ If you do not use the `download-schema` feature, you can still override the buil
 
 We will try to update the built-in schemas from time to time, and the default setting will always be to use the latest built-in schema.
 
+## Similar Projects
+
+- [`bevy_ldtk`](https://github.com/katharostech/bevy_ldtk): A work-in-progress Bevy plugin for loading LDtk maps using this crate.
+- [`ldtk_rust`](https://github.com/estivate/ldtk_rust): modified version of the LDtk bindings created by [QuickType](https://github.com/quicktype/quicktype), with a good Bevy example that is hopefully useful for non-Bevy game engines, too.
+- Another [`bevy-ldtk`](https://github.com/tigregalis/bevy-ldtk): Work-in-progress Bevy plugin for loading LDtk maps.
+
 ## License
 
 LDtk-rs is licensed under the [Katharos License][k_license] which places certain restrictions on what you are allowed to use it for. Please read and understand the terms before using LDtk-rs for your project.
