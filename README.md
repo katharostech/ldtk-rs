@@ -3,7 +3,7 @@
 A crate for reading reading the [LDtk] 2D tile map format.
 
 The LDtk map format is simply a JSON format, which allows us to read the map file using
-[`serde`]. This crate contains the serializable Rust structures corresponding to the map file
+`serde`. This crate contains the serializable Rust structures corresponding to the map file
 JSON structure.
 
 ## Example
@@ -28,13 +28,13 @@ The entire crate is automatically generated from the [JSON Schema](http://json-s
 
 ## Build Configuration & Features
 
-By default, the crate will generate code for reading the LDtk format from built-in JSON Schema file, but you can also specify any version of LDtk newer than `v0.7.0`, or `master` in the `LDTK_VERSION` environment variable and enable the `download-schema` cargo feature at build time to have the crate automatically download the latest schema and build against that.
+By default, the crate will generate code for reading the LDtk format from a built-in JSON Schema file, but you can also specify any version of LDtk newer than `v0.7.0`, or `master` in the `LDTK_VERSION` environment variable and enable the `download-schema` cargo feature at build time to have the crate automatically download the latest schema and build against that.
 
 If you do not use the `download-schema` feature, you can still override the built-in schema to use. The currently available built-in schema versions are:
 
 - `v0.7.0`
 
-We will try to update the built-in schemas from time to time.
+We will try to update the built-in schemas from time to time, and the default setting will always be to use the latest built-in schema.
 
 ## License
 

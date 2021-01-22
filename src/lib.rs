@@ -20,7 +20,25 @@
 //! }
 //! ```
 //!
-//! [LDtk]: https://github.com/deepnight/ldtk
+//! [ldtk]: https://github.com/deepnight/ldtk
+//!
+//! The entire crate is automatically generated from the [JSON Schema](http://json-schema.org/) in the [LDtk repo](https://github.com/deepnight/ldtk/blob/master/docs/JSON_SCHEMA.json).
+//!
+//! ## Build Configuration & Features
+//!
+//! By default, the crate will generate code for reading the LDtk format from a built-in JSON Schema file, but you can also specify any version of LDtk newer than `v0.7.0`, or `master` in the `LDTK_VERSION` environment variable and enable the `download-schema` cargo feature at build time to have the crate automatically download the latest schema and build against that.
+//!
+//! If you do not use the `download-schema` feature, you can still override the built-in schema to use. The currently available built-in schema versions are:
+//!
+//! - `v0.7.0`
+//!
+//! We will try to update the built-in schemas from time to time, and the default setting will always be to use the latest built-in schema.
+//!
+//! ## License
+//!
+//! LDtk-rs is licensed under the [Katharos License][k_license] which places certain restrictions on what you are allowed to use it for. Please read and understand the terms before using LDtk-rs for your project.
+//!
+//! [k_license]: https://github.com/katharostech/katharos-license
 
 // The actual code is generated in the `build.rs`.
 include!(concat!(env!("OUT_DIR"), "/schema.rs"));
