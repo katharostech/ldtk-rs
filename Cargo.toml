@@ -1,6 +1,6 @@
 [package]
 name = "ldtk"
-version = "0.2.0-alpha2"
+version = "0.2.0-alpha3"
 authors = ["Zicklag <zicklag@katharostech.com>"]
 edition = "2018"
 license-file = "LICENSE.md"
