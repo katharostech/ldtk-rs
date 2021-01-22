@@ -17,7 +17,7 @@ categories = [
 
 [features]
 default = []
-download-schema = []
+download-schema = ["isahc"]
 
 [dependencies]
 serde = { version = "1.0.118", features = ["derive"] }
@@ -28,4 +28,4 @@ heck = "0.3.2"
 quote = "1.0.8"
 serde = { version = "1.0.118", features = ["derive"] }
 serde_json = "1.0.61"
-isahc = { version = "1.0.3", features = ["json"] }
+isahc = { version = "1.0.3", features = ["json"], optional = true }
