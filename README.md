@@ -75,7 +75,7 @@ will pull the latest schema from the master branch of the LDtk git repo.
 
 ## Similar Projects & Bevy Integration
 
-- [`bevy_ldtk`](https://github.com/katharostech/bevy_ldtk): A work-in-progress Bevy plugin for loading LDtk maps using this crate.
+- [`bevy_ldtk`](https://github.com/katharostech/bevy_ldtk): A Bevy plugin for loading LDtk maps that uses this crate.
 - [`ldtk_rust`](https://github.com/estivate/ldtk_rust): modified version of the LDtk bindings created by [QuickType](https://github.com/quicktype/quicktype), with a good Bevy example that is hopefully useful for non-Bevy game engines, too.
 - Another [`bevy-ldtk`](https://github.com/tigregalis/bevy-ldtk): Work-in-progress Bevy plugin for loading LDtk maps.
 
