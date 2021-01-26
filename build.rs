@@ -126,7 +126,6 @@ fn get_type_tokens(ty: &JsonType, items: &Option<PropertyType>) -> TokenStream {
 }
 
 fn main() {
-
     #[cfg(feature = "download-schema")]
     let version = std::env::var("LDTK_VERSION").unwrap_or("master".into());
     #[cfg(feature = "download-schema")]
@@ -224,8 +223,6 @@ fn main() {
             // snake case.
             let new_field_name = if field_name == "type" {
                 format!("{}_{}", def_name.to_snake_case(), field_name)
-            } else if def_name == "Tile" && field_name == "f" {
-                "flip".into()
             } else {
                 field_name.clone()
             };
