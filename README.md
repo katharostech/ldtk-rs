@@ -64,8 +64,12 @@ to make the crate download the JSON schema from the LDtk repo.
 
 This crate currently has the schema for the following versions of LDtk built-in:
 
-- `v0.8.1`
+- `v0.8.1` ( patched, see note below )
 - `v0.7.0`
+
+> **Note:** In version 0.8.1 there was a field that was marked as non-null in the JSON schema,
+> but in one of the LDtk sample maps the field was null. We patched the JSON schema to make the
+> field nullable so that the map would load correctly.
 
 As newer LDtk versions are released we may update add new built-in schemas and update the
 default schema to the latest one. Updates to the default schema are a breaking change and a new

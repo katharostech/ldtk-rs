@@ -1249,7 +1249,6 @@
 		"EnumDefValues": {
 			"title": "Enum value definition",
 			"required": [
-				"__tileSrcRect",
 				"id"
 			],
 			"additionalProperties": false,
