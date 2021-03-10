@@ -1,7 +1,7 @@
 # ldtk
 
-[![Crates.io](https://img.shields.io/crates/v/bevy_ldtk.svg)](https://crates.io/crates/bevy_ldtk)
-[![Docs.rs](https://docs.rs/bevy_ldtk/badge.svg)](https://docs.rs/bevy_ldtk)
+[![Crates.io](https://img.shields.io/crates/v/ldtk.svg)](https://crates.io/crates/ldtk)
+[![Docs.rs](https://docs.rs/ldtk/badge.svg)](https://docs.rs/ldtk)
 [![Katharos License](https://img.shields.io/badge/License-Katharos-blue)](https://github.com/katharostech/katharos-license)
 
 A crate for reading the [LDtk] tile map format.
@@ -91,3 +91,9 @@ what you are allowed to use it for. Please read and understand the terms before 
 for your project.
 
 [k_license]: https://github.com/katharostech/katharos-license
+
+## Similar Projects & Bevy Integration
+
+- [`bevy_ldtk`](https://github.com/katharostech/bevy_ldtk): A Bevy plugin for loading LDtk maps that uses this crate.
+- [`ldtk_rust`](https://github.com/estivate/ldtk_rust): modified version of the LDtk bindings created by [QuickType](https://github.com/quicktype/quicktype), with a good Bevy example that is hopefully useful for non-Bevy game engines, too.
+- Another [`bevy-ldtk`](https://github.com/tigregalis/bevy-ldtk): Work-in-progress Bevy plugin for loading LDtk maps.
