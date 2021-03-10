@@ -135,7 +135,7 @@ fn main() {
         .unwrap();
 
     #[cfg(not(feature = "download-schema"))]
-    let version = std::env::var("LDTK_VERSION").unwrap_or("v0.7.0".into());
+    let version = std::env::var("LDTK_VERSION").unwrap_or("v0.8.1".into());
     #[cfg(not(feature = "download-schema"))]
     let schema: JsonSchema = serde_json::from_reader(
         std::fs::OpenOptions::new()
