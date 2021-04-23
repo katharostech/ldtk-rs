@@ -58,6 +58,7 @@
 //!
 //! This crate currently has the schema for the following versions of LDtk built-in:
 //!
+//! - `v0.9.3`
 //! - `v0.8.1` ( patched, see note below )
 //! - `v0.7.0`
 //!
