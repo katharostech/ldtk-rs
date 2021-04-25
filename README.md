@@ -15,7 +15,7 @@ format using [`serde`].
 
 ```toml
 # Note: We must specify the version of LDtk we want to support in a feature flag
-ldtk = { version = "0.4.0", features = ["ldtk-v0.9.3"] }
+ldtk = { version = "0.4.0", features = ["ldtk-v0-9-3"] }
 ```
 
 **`main.rs`:**
@@ -77,6 +77,10 @@ This crate currently has the schema for the following versions of LDtk built-in:
 - `v0.9.3`
 - `v0.8.1` ( patched, see note below )
 - `v0.7.0`
+
+The format of the feature flags for specific versions is like this: `ldtk-v0-9-3`. Note that the
+periods in the version have been replaced with dashes to be conformat with cargo's feature
+naming conventions.
 
 > **Note:** In version 0.8.1 there was a field that was marked as non-null in the JSON schema,
 > but in one of the LDtk sample maps the field was null. We patched the JSON schema to make the
