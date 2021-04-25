@@ -20,9 +20,9 @@ categories = [
 default = []
 
 # Specify one of these features to use a crate built-in schema
-'ldtk-v0.7.0' = ["local-schema"]
-'ldtk-v0.8.1' = ["local-schema"]
-'ldtk-v0.9.3' = ["local-schema"]
+'ldtk-v0-7-0' = ["local-schema"]
+'ldtk-v0-8-1' = ["local-schema"]
+'ldtk-v0-9-3' = ["local-schema"]
 
 # Or specify this feature to download the schema automatically from GitHub
 download-schema = ["isahc"]
@@ -42,4 +42,4 @@ serde_json = "1.0.61"
 isahc = { version = "1.0.3", features = ["json"], optional = true }
 
 [package.metadata.docs.rs]
-features = ["ldtk-v0.9.3"]
+features = ["ldtk-v--9-3"]

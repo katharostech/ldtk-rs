@@ -145,13 +145,13 @@ fn main() {
     // flags are specified, even though that shouldn't be done, the latest one will take precedence.
     //
 
-    #[cfg(all(not(feature = "download-schema"), feature = "ldtk-v0.7.0"))]
+    #[cfg(all(not(feature = "download-schema"), feature = "ldtk-v0-7-0"))]
     let ldtk_version = "v0.7.0";
 
-    #[cfg(all(not(feature = "download-schema"), feature = "ldtk-v0.8.1"))]
+    #[cfg(all(not(feature = "download-schema"), feature = "ldtk-v0-8-1"))]
     let ldtk_version = "v0.8.1";
 
-    #[cfg(all(not(feature = "download-schema"), feature = "ldtk-v0.9.3"))]
+    #[cfg(all(not(feature = "download-schema"), feature = "ldtk-v0-9-3"))]
     let ldtk_version = "v0.9.3";
 
     #[cfg(not(feature = "download-schema"))]
