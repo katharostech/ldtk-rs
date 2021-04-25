@@ -126,6 +126,12 @@ fn get_type_tokens(ty: &JsonType, items: &Option<PropertyType>) -> TokenStream {
 }
 
 fn main() {
+    #[cfg(not(any(feature = "download-schema", feature = "local-schema")))]
+    compile_error!(
+        "You must specify an `ldtk-[version]` cargo feature or the `download-schema` feature \
+        to automatically download the latest schema version."
+    );
+
     #[cfg(feature = "download-schema")]
     let version = std::env::var("LDTK_VERSION").unwrap_or("master".into());
     #[cfg(feature = "download-schema")]
@@ -134,8 +140,23 @@ fn main() {
         .json()
         .unwrap();
 
+    //
+    // NOTE: These version flags should be in ascending order so that if multiple versions feature
+    // flags are specified, even though that shouldn't be done, the latest one will take precedence.
+    //
+
+    #[cfg(all(not(feature = "download-schema"), feature = "ldtk-v0.7.0"))]
+    let ldtk_version = "v0.7.0";
+
+    #[cfg(all(not(feature = "download-schema"), feature = "ldtk-v0.8.1"))]
+    let ldtk_version = "v0.8.1";
+
+    #[cfg(all(not(feature = "download-schema"), feature = "ldtk-v0.9.3"))]
+    let ldtk_version = "v0.9.3";
+
     #[cfg(not(feature = "download-schema"))]
-    let version = std::env::var("LDTK_VERSION").unwrap_or("v0.9.3".into());
+    let version = std::env::var("LDTK_VERSION").unwrap_or(ldtk_version.to_string());
+
     #[cfg(not(feature = "download-schema"))]
     let schema: JsonSchema = serde_json::from_reader(
         std::fs::OpenOptions::new()

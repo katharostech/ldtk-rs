@@ -11,6 +11,15 @@ format using [`serde`].
 
 ## Example
 
+**`Cargo.toml`:**
+
+```toml
+# Note: We must specify the version of LDtk we want to support in a feature flag
+ldtk = { version = "0.4.0", features = ["ldtk-v0.9.3"] }
+```
+
+**`main.rs`:**
+
 ```rust
 use ldtk::Project;
 
@@ -58,12 +67,14 @@ This entire crate is automatically generated from the [JSON Schema](http://json-
 from the [LDtk repo](https://github.com/deepnight/ldtk/blob/master/docs/JSON_SCHEMA.json) and
 can be automatically updated with LDtk releases.
 
-By default the crate will use a copy of the JSON schema that is built into the crate so that it
-doesn't require network access to build, but you can supply the `download-schema` cargo feature
-to make the crate download the JSON schema from the LDtk repo.
+By default the crate requires that you pass a feature indicating a version of the JSON schema
+that is built into the crate so that it doesn't require network access to build, but you can
+also supply the `download-schema` cargo feature to make the crate download the JSON schema from
+the LDtk repo instead ( See "Downloading the Schema" below ).
 
 This crate currently has the schema for the following versions of LDtk built-in:
 
+- `v0.9.3`
 - `v0.8.1` ( patched, see note below )
 - `v0.7.0`
 
@@ -71,18 +82,15 @@ This crate currently has the schema for the following versions of LDtk built-in:
 > but in one of the LDtk sample maps the field was null. We patched the JSON schema to make the
 > field nullable so that the map would load correctly.
 
-As newer LDtk versions are released we may update add new built-in schemas and update the
-default schema to the latest one. Updates to the default schema are a breaking change and a new
-release of this crate will be made.
+As newer LDtk versions are released we may add new built-in schemas. These will each be under
+new feature flags so that updates to the schema do not need to be breaking changes.
 
-### `LDTK_VERSION`
+### Downloading the Schema
 
-You can specify which version of LDtk you want to build this crate for by setting the
-`LDTK_VERSION` environment variable at build time. Without the `download-schema` feature, the
-`LDTK_VERSION` will default to the latest built-in schema version.
-
-When the `download-schema` feature is set, the `LDTK_VERSION` will default to `master` which
-will pull the latest schema from the master branch of the LDtk git repo.
+When the `download-schema` feature is provided, you can specify which version of LDtk you want
+to build this crate for by setting the `LDTK_VERSION` environment variable at build time.
+`LDTK_VERSION` will default to `master` which will pull the latest schema from the master branch
+of the LDtk git repo.
 
 ## License
 

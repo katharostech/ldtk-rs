@@ -1,0 +1,5 @@
+{
+    "rust-analyzer.cargo.features": [
+        "ldtk-v0.9.3"
+    ]
+}

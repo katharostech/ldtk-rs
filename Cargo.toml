@@ -1,6 +1,6 @@
 [package]
 name = "ldtk"
-version = "0.3.0"
+version = "0.4.0"
 authors = ["Zicklag <zicklag@katharostech.com>"]
 edition = "2018"
 license-file = "LICENSE.md"
@@ -16,8 +16,19 @@ categories = [
 ]
 
 [features]
+# By default no features are included, you *must* specify one of the below features
 default = []
+
+# Specify one of these features to use a crate built-in schema
+'ldtk-v0.7.0' = ["local-schema"]
+'ldtk-v0.8.1' = ["local-schema"]
+'ldtk-v0.9.3' = ["local-schema"]
+
+# Or specify this feature to download the schema automatically from GitHub
 download-schema = ["isahc"]
+
+# Helper feature you don't provide directly
+local-schema = []
 
 [dependencies]
 serde = { version = "1.0.118", features = ["derive"] }
